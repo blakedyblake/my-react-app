@@ -16,8 +16,12 @@ app.use(express.static(PublicPath))
 app.get('*',(req,res)=>{
     res.sendFile(path.join(PublicPath, 'index.html'))
 })
-
-
+app.get('/js',(req,res)=>{
+    res.sendFile(path.join(PublicPath,'index.js'))
+})
+app.get('/css',(req,res)=>{
+    res.sendFile(path.join(PublicPath,'index.css'))
+})
 
 
 
